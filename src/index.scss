@@ -1,0 +1,186 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[lang="fa-IR"] {
+    direction: rtl;
+}
+
+[lang="*en"] {
+    direction: ltr;
+}
+
+img {
+    max-width: 100%;
+}
+
+//-----
+.dollorPrice {
+    display: flex;
+    direction: rtl;
+    align-items: center;
+    gap: 10px;
+    margin: 2rem 0;
+
+    span {
+        font-family: "Vazir-Medium";
+    }
+}
+
+.dollorSection {
+    font-family: "Vazir-Medium";
+}
+
+.dollorSection div {
+    width: 70px;
+    text-align: center;
+}
+
+form {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    label {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-family: "Vazir-Light";
+
+        input:nth-child(1) {
+            width: 110px;
+            height: 35px;
+            text-align: center;
+        }
+
+        .imageSwap {
+            width: 30px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        .imageSwap.rotated {
+            transform: rotate(180deg)
+        }
+
+        input:nth-child(3) {
+            width: 110px;
+            height: 35px;
+            font-size: 15px;
+            overflow-x: visible;
+            text-align: center;
+        }
+    }
+
+    button {
+        margin: 2rem 0;
+        background-color: #00b282;
+        font-family: "Vazir-Medium";
+        font-size: 14px;
+        border-radius: 3px;
+        border: 1px solid #00b282;
+        cursor: pointer;
+        color: white;
+    }
+
+}
+
+.resultFound {
+    background-color: rgb(219, 219, 219);
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    font-family: "Vazir-Medium";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pulse-wrapper {
+    position: relative;
+    width: 60px;
+    height: 60px;
+
+    .pulse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #bd3d44;
+        animation: pulseAnim 1.5s infinite ease-in-out;
+        z-index: 0;
+
+    }
+
+    .icon {
+        position: relative;
+        z-index: 1;
+        background-image: url("../public/images/us.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+
+@media(min-width : 540px) {
+
+    .resultFound {
+        background-color: rgb(219, 219, 219);
+        width: 90%;
+        height: 200px;
+
+        font-family: "Vazir-Medium";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media(min-width : 768px) {
+
+    .resultFound {
+        background-color: rgb(219, 219, 219);
+        width: 80%;
+        height: 200px;
+        margin: auto;
+        font-family: "Vazir-Medium";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+@keyframes pulseAnim {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    70% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
